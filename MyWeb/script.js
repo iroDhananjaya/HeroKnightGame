@@ -1,4 +1,4 @@
-getElementById("name_button")
+document.getElementById("name_button").onclick = function()
 {
-    onclick = window.alert("10 s remaining");
+    onclick = window.alert("Submitted Successfully");
 }
