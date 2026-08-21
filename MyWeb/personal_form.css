@@ -1,5 +1,22 @@
 body {
     /*background : linear-gradient(to right black,rgb(12, 12, 110));*/
-    background-image: url("ColoredLion.jpg");
+    background-image:/* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
+                    url("ColoredLion.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-image: capacity cover;
+}
+fieldset{
+    background-color: rgba(255, 255, 255, 0.715);
+    text-align: center;
+    width: 40%;
+    height: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+h1{
+    text-align: center;
+    color: white;
 }
