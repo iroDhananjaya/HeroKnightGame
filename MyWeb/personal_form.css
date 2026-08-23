@@ -28,3 +28,22 @@ label{
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
 }
+
+#clock{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+#clock_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid;
+    height: 80px;
+    border-radius: 30px;
+    border-color: yellow;
+    background: linear-gradient(to right, black,rgb(27, 27, 191));
+
+}
