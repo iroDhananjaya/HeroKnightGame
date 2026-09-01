@@ -1,0 +1,50 @@
+body{
+    background:linear-gradient(to right,black,rgb(29, 29, 149));
+    align-items: center;
+}
+
+h1{
+    color:yellow;
+    text-align:center;
+    font-size:70px;
+    font-family: "verdana", serif;
+}
+
+.noticeContainer{
+    background-color: rgba(255, 255, 255, 0.419);
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    justify-content: center;
+    display: flex;
+    width: 1000px;
+    height: 500px;
+    padding: 20px;
+}
+
+.studentInformationForm{
+    border: 8px solid rgb(38, 255, 0);
+    font-size: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+}
+
+#studentFormButton{
+    background-color: rgb(0, 244, 0);
+    font-color: rgb(234, 255, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cs1142Paper{
+    border: 2px solid rgb(253, 253, 0);
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+}
