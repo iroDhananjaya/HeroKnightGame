@@ -11,7 +11,7 @@ h1{
 }
 
 .noticeContainer{
-    background-color: rgba(255, 255, 255, 0.722);
+    background:linear-gradient(to right, white,rgba(69, 255, 69, 0.668));
     text-align: center;
     align-items: center;
     margin-left: auto;
@@ -27,8 +27,8 @@ h1{
 .studentInformationForm{
     border: 8px solid rgb(38, 255, 0);
     font-size: 20px;
-    background-color: white;
-    border-radius: 10px;
+    background:linear-gradient(to right, red,yellow);
+    border-radius: 30px;
     width: 400px;
     height: 500px;
     margin: 20px;
@@ -52,8 +52,8 @@ h2{
 .cs1142Paper{
     border: 8px solid rgb(38, 255, 0);
     font-size: 20px;
-    background-color: white;
-    border-radius: 10px;
+    background:linear-gradient(to right,rgb(255, 157, 0),rgb(251, 255, 0));
+    border-radius: 30px;
     width: 400px;
     height: 500px;
     margin: 20px;
