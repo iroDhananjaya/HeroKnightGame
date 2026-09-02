@@ -1,15 +1,22 @@
 body{
-    background-color: white;
+    
+    background-image: url("../PicturesFolder/Ruhuna1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: center;
 }
 
 h1{
-    color:rgb(3, 3, 3);
+    color:rgb(255, 255, 255);
     margin-top: 10px;
     margin-bottom: 10px;
     text-align:center;
     font-size:100px;
     font-family: "Edwardian Script ITC", sans-serif;
+}
+
+hr{
+    border:3px solid rgb(255, 255, 255);
 }
 
 .noticeContainer{
@@ -27,9 +34,9 @@ h1{
 }
 
 .studentInformationForm{
-    color:yellow;
+    color:black;
     font-size: 20px;
-    background:linear-gradient(to right, black,rgb(12, 3, 182));
+    background:rgba(255, 255, 255, 0.777);
     border-radius: 30px;
     width: 400px;
     height: 500px;
@@ -41,21 +48,21 @@ h1{
     background-color: rgb(0, 244, 0);
     color: rgb(2, 0, 7);
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Arial Black", "Arial Narrow", Arial, sans-serif;
     border-radius: 20px;
     width: 150px;
     height: 50px;
 }
 
 h2{
-    font-family: 'Chiller', 'Arial Narrow', Arial, sans-serif;
-    font-size: 50px;
+    font-family: "Bahnschrift SemiBold SemiCondensed", "Arial Narrow", Arial, sans-serif;
+    font-size: 40px;
 }
 
 .cs1142Paper{
     border: none;
     font-size: 20px;
-    background:linear-gradient(to right,rgb(255, 157, 0),rgb(251, 255, 0));
+    background:rgba(255, 255, 255, 0.777);
     border-radius: 30px;
     width: 400px;
     height: 500px;
@@ -68,7 +75,7 @@ h2{
     background-color: rgb(0, 244, 0);
     color: rgb(2, 0, 7);
     font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Arial Black", "Arial Narrow", Arial, sans-serif;
     border-radius: 20px;
     width: 150px;
     height: 50px;
