@@ -76,7 +76,7 @@ h2{
     
 }
 
-#cs1142PaperButton{
+.noticeButton{
     background-color: rgb(0, 244, 0);
     color: rgb(2, 0, 7);
     font-size: 20px;
