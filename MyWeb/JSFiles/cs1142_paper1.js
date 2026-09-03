@@ -1,4 +1,4 @@
-let timeInSeconds = 5 * 60; // 5 minutes in seconds
+let timeInSeconds = 10 * 60; // 10 minutes in seconds
 let timerElement = document.getElementById("timer");
 
 function updateTimer() {
@@ -15,6 +15,13 @@ function updateTimer() {
 //updateTimer(); // Initial call to display the timer immediately
 
 let timerInterval = setInterval(() => {
-    timeInSeconds--;
+    if(timeInSeconds <= 0) {
+        clearInterval(timerInterval);
+        alert("Time's up! The test will be submitted automatically.");
+    }
+    else{
+        timeInSeconds--;
+    }
+    
     updateTimer();
 }, 1000);
