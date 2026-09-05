@@ -11,7 +11,7 @@ h1{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align:center;
-    font-size:100px;
+    font-size:200px;
     font-family: "Edwardian Script ITC", sans-serif;
 }
 
@@ -22,14 +22,15 @@ hr{
 .noticeContainer{
     
     text-align: center;
+    
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
     justify-content: center;
     display: flex;
-    width: 1000px;
-    height: 500px;
+    width: 80%;
+    height: 1100px;
     padding: 20px;
 }
 
@@ -38,8 +39,8 @@ hr{
     font-size: 20px;
     background:rgba(255, 255, 255, 0.777);
     border-radius: 30px;
-    width: 400px;
-    height: 500px;
+    width: 30%;
+    height: 80%;
     margin: 20px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.522);
 }
@@ -63,26 +64,26 @@ h2{
     font-size: 40px;
 }
 
-.cs1142Paper{
+.notice{
     border: none;
     font-size: 20px;
     background:rgba(255, 255, 255, 0.777);
     border-radius: 30px;
-    width: 400px;
-    height: 500px;
+    width: 30%;
+    height: 80%;
     margin: 20px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.522);
     
 }
 
-#cs1142PaperButton{
+.noticeButton{
     background-color: rgb(0, 244, 0);
     color: rgb(2, 0, 7);
     font-size: 20px;
     font-family: "Arial Black", "Arial Narrow", Arial, sans-serif;
     border-radius: 20px;
     width: 150px;
-    height: 50px;
+    height: 60px;
 }
 
 #cs1142PaperButton:hover{

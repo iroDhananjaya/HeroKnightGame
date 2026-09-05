@@ -1,0 +1,35 @@
+body{
+    background-color: antiquewhite;
+
+}
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+*{
+    color: maroon;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    border: 2px solid rgb(45, 0, 0);
+    background-color: floralwhite;
+    font-size: 15px;
+    line-height: 2;
+}
+
+th{
+    background-color: saddlebrown;
+    color: white;
+}
+
+
+th,td,thead{
+    padding: 12px;
+    border: 1px solid rgb(45, 0, 0);
+}

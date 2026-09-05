@@ -1,11 +1,28 @@
 body{
-    background: linear-gradient(to right, rgb(245, 243, 243),rgb(151, 223, 151));
+    background-color: #1f3c64;
+    background:linear-gradient(to right,black,rgb(30, 30, 160));
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
 }
-h1{
+h1,h2,h3{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+}
+
+h4{
+    color: rgb(5, 5, 5);
     text-align: center;
     font-size: 50px;
-    color: rgb(0, 0, 0);
-    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+hr{
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
 }
 
 p{
@@ -13,76 +30,90 @@ p{
 }
 
 .questionContainer {
-    background-color: rgba(208, 207, 207, 0.336);
+    background-color: rgba(208, 207, 207, 0.826);
     font-size: 20px;
     height:fit-content;
-    width: 1200px;
+    width: 70%;
     border-radius: 45px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    padding: 20px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
-.question1 {
+.question {
     background-color: rgb(255, 254, 254);
-    font-size: 20px;
+    color: rgb(72, 68, 68);
+    border: 3px solid rgb(0, 0, 0);
+    font-size: 35px;
     border-radius: 15px;
-    height: 250px;
-    width: 900px;
+    font-weight: none;
+    height: auto;
+    width: 70%;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    display: flex;
     flex-direction: column;
+    margin: 20px auto;
     margin-bottom: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.336);
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
-.question2 {
-    background-color: rgb(255, 254, 254);
-    font-size: 20px;
-    border-radius: 15px;
-    height: 250px;
-    width: 900px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.336);
+input[type="radio"], input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
-.question3 {
-    background-color: rgb(255, 254, 254);
-    font-size: 20px;
-    border-radius: 15px;
-    height: 250px;
-    width: 900px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.336);
+#timmer_container{
+    font-size: 50px;
+    color: rgb(251, 255, 0);
 }
 
+#submitBtn{
+    background-color: rgb(0, 253, 0);
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    width: 300px;;
+    height:100px;
+    font-size: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
 
-.question4 {
-    background-color: rgb(255, 254, 254);
-    font-size: 20px;
-    border-radius: 15px;
-    height: 250px;
-    width: 900px;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.336);
+#submitBtn:hover{
+    background-color: rgb(2, 194, 2);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.6s ease;
+}
+
+#resetBtn{
+    background-color: rgb(255, 2, 2);
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    width: 300px;;
+    height:100px;
+    font-size: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+#resetBtn:hover{
+    background-color: rgb(190, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: background-color 0.6s ease;
 }
