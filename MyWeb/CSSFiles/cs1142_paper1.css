@@ -30,7 +30,7 @@ p{
 }
 
 .questionContainer {
-    background-color: rgba(208, 207, 207, 0.826);
+    background-color: rgba(255, 255, 255, 0.295);
     font-size: 20px;
     height:fit-content;
     width: 70%;
@@ -78,6 +78,13 @@ input[type="radio"], input[type="checkbox"] {
 #timmer_container{
     font-size: 50px;
     color: rgb(251, 255, 0);
+}
+
+#marks{
+    font-size: 50px;
+    color: rgb(0, 255, 0);
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #submitBtn{

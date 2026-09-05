@@ -12,6 +12,7 @@
         <h3>Paper 1 /2026</h3>
 
         <div id="timmer_container">Time Remaining: <span id="timer">00:00:00</span></div>
+        <div id="marks"></div>
         <hr>
         <div class="questionContainer">
             <div class="question" id="question1">
@@ -49,10 +50,10 @@
                 <hr>
                 <p>Mark the sentence if they are correct or wrong<br><br>
                     True&emsp;False<br>
-                    <label><input type="radio" name="question4_answer1" value="true">&emsp;<input type="radio" name="question4_answer1" value="false">&emsp;SDLC provides a structured roadmap for software development</label><br>
-                    <label><input type="radio" name="question4_answer2" value="true">&emsp;<input type="radio" name="question4_answer2" value="false">&emsp;good system analyst should have good art skills</label><br>
-                    <label><input type="radio" name="question4_answer3" value="true">&emsp;<input type="radio" name="question4_answer3" value="false">&emsp;println() is a method used to print output to the console in C language</label><br>
-                    <label><input type="radio" name="question4_answer4" value="true">&emsp;<input type="radio" name="question4_answer4" value="false">&emsp;C is a low-level programming language</label><br>
+                    <label><input type="radio" name="question4_answer1" value="true">&emsp;&emsp;&emsp;<input type="radio" name="question4_answer1" value="false">&emsp;SDLC provides a structured roadmap for software development</label><br>
+                    <label><input type="radio" name="question4_answer2" value="true">&emsp;&emsp;&emsp;<input type="radio" name="question4_answer2" value="false">&emsp;good system analyst should have good art skills</label><br>
+                    <label><input type="radio" name="question4_answer3" value="true">&emsp;&emsp;&emsp;<input type="radio" name="question4_answer3" value="false">&emsp;println() is a method used to print output to the console in C language</label><br>
+                    <label><input type="radio" name="question4_answer4" value="true">&emsp;&emsp;&emsp;<input type="radio" name="question4_answer4" value="false">&emsp;C is a low-level programming language</label><br>
                 </p>
             </div>
             <div class="question" id="question5">
@@ -75,7 +76,7 @@
                     <label><input type="checkbox" name="question6" value="4">4. Early Testing</label><br>
                 </p>
             </div>
-            <button id="submitBtn" onclick="submitTest()">Submit</button>&emsp;
+            <button id="submitBtn" onclick="checkAnswers()">Submit</button>&emsp;
             <button type="reset" id="resetBtn" onclick="resetTest()">Reset</button>
         </div>
         <script src="../JSFiles/cs1142_paper1.js"></script>
