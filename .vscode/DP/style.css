@@ -1,0 +1,35 @@
+body {
+    background: radial-gradient(circle, #ffff, #ffc067);
+    min-height: 100vh;
+    margin: 0%;
+}
+
+#mainhead {
+    color: rgb(251, 248, 248);
+    -webkit-text-stroke: 1px #0f0e0e;
+    font-weight: 1500;
+    font-size: 45px;
+    text-align: center;
+}
+
+.que {
+    border-width: 2px;
+    border-color: #000000;
+    border-style: solid;
+    
+    border-radius: 10px;
+    width: 800px;
+    margin: auto;
+}
+
+.qnum {
+    text-align: center;
+}
+
+.qhead {
+    text-align: left;
+}
+
+.ans {
+    text-align: left;
+}
