@@ -1,4 +1,4 @@
-let timeInSeconds = 1 * 60; // 10 minutes in seconds
+let timeInSeconds = 10 * 60; // 10 minutes in seconds
 let timerElement = document.getElementById("timer");
 
 function updateTimer() {
@@ -16,16 +16,18 @@ function updateTimer() {
 function checkAnswers() {
     let score = 0;
     let totalQuestions = 6;
-    let answers = [1,2,3,4,1,2];
-    let question4Answers = ["true","false","true","true"];
-    let question6Answers = [1,3,4];
-    let marksAllowed = 12;
+    let answers = [2,1,3,4,3,6,3,8,3,10];// 4,6,8,10 number didn't check
+    let question4Answers = ["true","false","false","false"];
+    let question6Answers = [2,3];
+    let question8Answers = [1,3,4];
+    let question10Answers = ["true","false","false","false"];
+    let marksAllowed = 22;
     
 
     // Check each question's answer
 
-    if(totalQuestions <= 6){
-        for(let i=1; i<=6; i++){
+    if(totalQuestions <= 10){
+        for(let i=1; i<=10; i++){
             let questionContainer = document.getElementById(`question${i}`);
             let CorrectAnswersCount = 0;
             
@@ -45,10 +47,12 @@ function checkAnswers() {
                 }
                 document.getElementById("question4_Mark").textContent = CorrectAnswersCount;
             }
-            else if(i == 6){
+            else if(i === 6){
                 
-                let question6Value = document.querySelectorAll(`input[name = "question6"]:checked`);
-                let correctAnswerCount = 0;
+                let question6Value = Array.from(document.querySelectorAll(`input[name = "question6"]:checked`));
+                let answerValues = question6Value.map(input => parseInt(input.value));
+                let correctAnswerCount ;
+
                 if(question6Value.length === question6Answers.length && Array.from(question6Value).every(input => question6Answers.includes(parseInt(input.value)))){
                     score+=4;
                     questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";
@@ -56,7 +60,7 @@ function checkAnswers() {
                 }
                 else{
                     questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
-                    correctAnswerCount = question6Value.filter(ans => question6Answers.includes(ans)).length;
+                    correctAnswerCount = answerValues.filter(val => question6Answers.includes(val)).length;
                     if(correctAnswerCount === 2){
                         score+=2;
                     }
@@ -67,6 +71,47 @@ function checkAnswers() {
                 }
                 document.getElementById("question6_Mark").textContent = correctAnswerCount;
 
+            }
+            else if(i === 8){
+                
+                let question8Value = Array.from(document.querySelectorAll(`input[name = "question8"]:checked`));
+                let answerValues = question8Value.map(input => parseInt(input.value));
+                let correctAnswerCount ;
+
+                if(question8Value.length === question8Answers.length && Array.from(question8Value).every(input => question8Answers.includes(parseInt(input.value)))){
+                    score+=4;
+                    questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";
+                    correctAnswerCount = 4; // give mark as correct answer count
+                }
+                else{
+                    questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                    correctAnswerCount = answerValues.filter(val => question8Answers.includes(val)).length;
+                    if(correctAnswerCount === 2){
+                        score+=2;
+                    }
+                    else{
+                        score++;
+                    }
+                    
+                }
+                document.getElementById("question8_Mark").textContent = correctAnswerCount;
+
+            }
+            else if(i === 10){ // choose question 10
+                for(let j=1; j<=4; j++){
+                    let boolValue = document.querySelector(`input[name="question10_answer${j}"]:checked`)?.value;
+                    if(boolValue === question10Answers[j-1]){
+                        score++;
+                        CorrectAnswersCount++;
+                        if(CorrectAnswersCount === 4){
+                            questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";  
+                        } 
+                    }
+                    else{
+                        questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                    }    
+                }
+                document.getElementById("question10_Mark").textContent = CorrectAnswersCount;
             }
             else{
                 let value = document.querySelector(`input[name="question${i}"]:checked`)?.value;
@@ -88,7 +133,14 @@ function checkAnswers() {
                     else if(document.querySelector(`input[name="question6"]:checked`)?.value == answers[i-1]){
                         document.getElementById("question6_Mark").textContent = 4;
                     }
+                    else if(document.querySelector(`input[name="question7"]:checked`)?.value == answers[i-1]){
+                        document.getElementById("question7_Mark").textContent = 1;
+                    }
+                    else if(document.querySelector(`input[name="question9"]:checked`)?.value == answers[i-1]){
+                        document.getElementById("question9_Mark").textContent = 1;
+                    }
 
+                    
                     console.log("run ");
                     questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";
                 }
