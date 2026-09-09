@@ -104,6 +104,18 @@ h2{
     background-color: rgb(0, 150, 0);
 }
 
+#joinUs{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    
+}
+
+#joinUsDev{
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+}
+
 #copyrightDiv{
     position: sticky;
     bottom: 0;
