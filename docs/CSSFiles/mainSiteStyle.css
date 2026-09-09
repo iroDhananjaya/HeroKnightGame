@@ -19,6 +19,12 @@ h1{
     font-family: "Edwardian Script ITC", sans-serif;
 }
 
+#paperNoticeTitle{
+    font-size: 45px;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+    color: black;
+}
+
 hr{
     border:3px solid rgb(255, 255, 255);
 }
@@ -31,6 +37,7 @@ hr{
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
+    padding: 30%;
     justify-content: center;
     display: flex;
     width: 80%;
