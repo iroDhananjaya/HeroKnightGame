@@ -1,5 +1,6 @@
 let timeInSeconds = 10 * 60; // 10 minutes in seconds
 let timerElement = document.getElementById("timer");
+let isSubmitButtonPressed = false;
 
 function updateTimer() {
     let hours = Math.floor(timeInSeconds / 3600);
@@ -23,9 +24,11 @@ function checkAnswers() {
     let question10Answers = ["true","false","false","false"];
     let marksAllowed = 22;
     
+    
 
     // Check each question's answer
 
+    isSubmitButtonPressed = true;
     if(totalQuestions <= 20){
         for(let i=1; i<=10; i++){
             let questionContainer = document.getElementById(`question${i}`);
@@ -113,36 +116,17 @@ function checkAnswers() {
                 }
                 document.getElementById("question10_Mark").textContent = CorrectAnswersCount;
             }
-            else{
+            else {
                 let value = document.querySelector(`input[name="question${i}"]:checked`)?.value;
-                if(value == answers[i-1]){
+                let markElement = document.getElementById(`question${i}_Mark`);
+                
+                if (value == answers[i - 1]) {
                     score++;
-                    if(document.querySelector(`input[name="question1"]:checked`)?.value == answers[i-1]){
-                        document.getElementById("question1_Mark").textContent = 1;
-                    }
-                    else if(document.querySelector(`input[name="question2"]:checked`)?.value == answers[i-1]){
-                        document.getElementById("question2_Mark").textContent = 1;
-                    }
-                    else if(document.querySelector(`input[name="question3"]:checked`)?.value == answers[i-1]){
-                        document.getElementById("question3_Mark").textContent = 1;
-                    }
-                    
-                    else if(document.querySelector(`input[name="question5"]:checked`)?.value == answers[i-1]){
-                        document.getElementById("question5_Mark").textContent = 1;
-                    }
-                    else if(document.querySelector(`input[name="question7"]:checked`)?.value == answers[i-1]){
-                        document.getElementById("question7_Mark").textContent = 1;
-                    }
-                    else if(document.querySelector(`input[name="question9"]:checked`)?.value == answers[i-1]){
-                        document.getElementById("question9_Mark").textContent = 1;
-                    }
-
-                    
-                    console.log("run ");
-                    questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";
-                }
-                else{
-                    questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                    if (markElement) markElement.textContent = 1;
+                    questionContainer.style.background = "linear-gradient(to left, white, rgb(0, 255, 0))";
+                } else {
+                    if (markElement) markElement.textContent = 0;
+                    questionContainer.style.background = "linear-gradient(to left, white, rgb(255, 2, 2))";
                 }
             }
             
@@ -160,6 +144,9 @@ let timerInterval = setInterval(() => {
         clearInterval(timerInterval);
         alert("Time's up! The test will be submitted automatically.");
         checkAnswers();
+    }
+    else if(isSubmitButtonPressed){
+        clearInterval(timerInterval);
     }
     else{
         timeInSeconds--;
