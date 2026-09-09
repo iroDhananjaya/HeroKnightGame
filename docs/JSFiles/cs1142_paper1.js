@@ -26,7 +26,7 @@ function checkAnswers() {
 
     // Check each question's answer
 
-    if(totalQuestions <= 10){
+    if(totalQuestions <= 20){
         for(let i=1; i<=10; i++){
             let questionContainer = document.getElementById(`question${i}`);
             let CorrectAnswersCount = 0;
@@ -34,7 +34,7 @@ function checkAnswers() {
             if(i === 4){ // choose question 4
                 for(let j=1; j<=4; j++){
                     let boolValue = document.querySelector(`input[name="question4_answer${j}"]:checked`)?.value;
-                    if(boolValue === question4Answers[j-1]){
+                    if(boolValue !== null && boolValue === question4Answers[j-1]){
                         score++;
                         CorrectAnswersCount++;
                         if(CorrectAnswersCount === 4){
@@ -53,7 +53,7 @@ function checkAnswers() {
                 let answerValues = question6Value.map(input => parseInt(input.value));
                 let correctAnswerCount ;
 
-                if(question6Value.length === question6Answers.length && Array.from(question6Value).every(input => question6Answers.includes(parseInt(input.value)))){
+                if(question6Value !== null && question6Value.length === question6Answers.length && Array.from(question6Value).every(input => question6Answers.includes(parseInt(input.value)))){
                     score+=4;
                     questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";
                     correctAnswerCount = 4; // give mark as correct answer count
@@ -61,10 +61,10 @@ function checkAnswers() {
                 else{
                     questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
                     correctAnswerCount = answerValues.filter(val => question6Answers.includes(val)).length;
-                    if(correctAnswerCount === 2){
+                    if(question6Value !== null && correctAnswerCount === 2){
                         score+=2;
                     }
-                    else{
+                    else if (correctAnswerCount !== 0){
                         score++;
                     }
                     
@@ -89,7 +89,7 @@ function checkAnswers() {
                     if(correctAnswerCount === 2){
                         score+=2;
                     }
-                    else{
+                    else if(correctAnswerCount !== 0){
                         score++;
                     }
                     
@@ -129,9 +129,6 @@ function checkAnswers() {
                     
                     else if(document.querySelector(`input[name="question5"]:checked`)?.value == answers[i-1]){
                         document.getElementById("question5_Mark").textContent = 1;
-                    }
-                    else if(document.querySelector(`input[name="question6"]:checked`)?.value == answers[i-1]){
-                        document.getElementById("question6_Mark").textContent = 4;
                     }
                     else if(document.querySelector(`input[name="question7"]:checked`)?.value == answers[i-1]){
                         document.getElementById("question7_Mark").textContent = 1;
