@@ -15,12 +15,24 @@ h1{
     margin-top: 10px;
     margin-bottom: 10px;
     text-align:center;
-    font-size:200px;
+    font-size:700%;
     font-family: "Edwardian Script ITC", sans-serif;
 }
 
 #paperNoticeTitle{
-    font-size: 45px;
+    font-size: 120%;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+    color: black;
+}
+
+#studentInformation{
+    font-size: 120%;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+    color: black;
+}
+
+#timeTable{
+    font-size: 120%;
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
     color: black;
 }
@@ -34,20 +46,21 @@ hr{
     text-align: center;
     
     align-items: center;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+
     border-radius: 30px;
-    padding: 30%;
     justify-content: center;
     display: flex;
     width: 80%;
-    height: 1100px;
-    padding: 20px;
+    height: 450px;
+    padding: 1px;
 }
 
 .studentInformationForm{
     color:black;
-    font-size: 20px;
+    
     background:rgba(255, 255, 255, 0.777);
     border-radius: 30px;
     width: 30%;
@@ -59,11 +72,11 @@ hr{
 #studentFormButton{
     background-color: rgb(0, 244, 0);
     color: rgb(2, 0, 7);
-    font-size: 20px;
+    font-size: 80%;
     font-family: "Arial Black", "Arial Narrow", Arial, sans-serif;
     border-radius: 20px;
-    width: 150px;
-    height: 50px;
+    width: 30%;
+    height: 50%;
 }
 
 #studentFormButton:hover{
@@ -72,16 +85,18 @@ hr{
 
 h2{
     font-family: "Bahnschrift SemiBold SemiCondensed", "Arial Narrow", Arial, sans-serif;
-    font-size: 40px;
+    font-size: 80%;
 }
 
 .notice{
     border: none;
-    font-size: 20px;
+    font-size: 100%;
     background:rgba(255, 255, 255, 0.777);
     border-radius: 30px;
     width: 30%;
-    height: 80%;
+    min-height: 400px;
+    height: auto;
+    margin-top: 5px;
     margin: 20px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.522);
     
@@ -90,18 +105,16 @@ h2{
 .noticeButton{
     background-color: rgb(0, 244, 0);
     color: rgb(2, 0, 7);
-    font-size: 20px;
+    font-size: 80%;
     font-family: "Arial Black", "Arial Narrow", Arial, sans-serif;
     border-radius: 20px;
-    width: 150px;
-    height: 60px;
+    width: 30%;
+    height: 50%;
+    cursor: pointer;
 }
 
-#cs1142PaperButton:hover{
+.noticeButton:hover{
     background-color: rgb(0, 200, 0);
-}
-#cs1142PaperButton:pointer{
-    background-color: rgb(0, 150, 0);
 }
 
 #joinUs{
@@ -123,5 +136,5 @@ h2{
     color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.375);
     text-align: center;
-    font-size: 20px;
+    font-size: 80%;
 }
