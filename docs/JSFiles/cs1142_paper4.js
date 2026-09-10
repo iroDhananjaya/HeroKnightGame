@@ -3,43 +3,43 @@ document.getElementById("submitBtn").onclick = function() {
     marks=0;
     q1=document.getElementById("1.3").checked;
     if(q1==true){
-        marks=marks+1;
+        marks++;
     }
     q2=document.getElementById("2.2").checked;
     if(q2==true){
-        marks=marks+1;
+        marks++;
     }
     q3=document.getElementById("3.4").checked;
     if(q3==true){
-        marks=marks+1;
+        marks++;
     }
     q4=document.getElementById("4.3").checked;
     if(q4==true){
-        marks=marks+1;
+        marks++;
     }
     q5=document.getElementById("5.3").checked;
     if(q5==true){
-        marks=marks+1;
+        marks++;
     }
     q6=document.getElementById("6.2").checked;
     if(q6==true){
-        marks=marks+1;
+        marks++;
     }
     q7=document.getElementById("7.4").checked;
     if(q7==true){
-        marks=marks+1;
+        marks++;
     }
     q8=document.getElementById("8.1").checked;
     if(q8==true){
-        marks=marks+1;
+        marks++;
     }
     q9=document.getElementById("9.2").checked;
     if(q9==true){
-        marks=marks+1;
+        marks++;
     }
     q10=document.getElementById("10.1").checked;
     if(q10==true){
-        marks=marks+1;
+        marks++;
     }
 
     if(marks==10){
