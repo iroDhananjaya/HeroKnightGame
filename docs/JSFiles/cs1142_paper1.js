@@ -14,15 +14,26 @@ function updateTimer() {
     }
 }
 
+function scrollToTop() {
+  // Scrolls smoothly to the top left of the document
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth' 
+  });
+}
+
 function checkAnswers() {
     let score = 0;
     let totalQuestions = 6;
-    let answers = [2,1,3,4,3,6,3,8,3,10];// 4,6,8,10 number didn't check
+    let answers = [2,1,3,4,3,6,3,8,3,10,11,3,13];// 4,6,8,10,11,13 number didn't check
     let question4Answers = ["true","false","false","false"];
     let question6Answers = [2,3];
     let question8Answers = [1,3,4];
     let question10Answers = ["true","false","false","false"];
-    let marksAllowed = 22;
+    let question11Answers = [1,3];
+    let question13Answers = ["false","true","true","false"];
+    let marksAllowedForall = 27;
     
     
 
@@ -30,7 +41,7 @@ function checkAnswers() {
 
     isSubmitButtonPressed = true;
     if(totalQuestions <= 20){
-        for(let i=1; i<=10; i++){
+        for(let i=1; i<=13; i++){
             let questionContainer = document.getElementById(`question${i}`);
             let CorrectAnswersCount = 0;
             
@@ -100,6 +111,7 @@ function checkAnswers() {
                 document.getElementById("question8_Mark").textContent = correctAnswerCount;
 
             }
+
             else if(i === 10){ // choose question 10
                 for(let j=1; j<=4; j++){
                     let boolValue = document.querySelector(`input[name="question10_answer${j}"]:checked`)?.value;
@@ -116,6 +128,48 @@ function checkAnswers() {
                 }
                 document.getElementById("question10_Mark").textContent = CorrectAnswersCount;
             }
+            else if(i === 11){
+                
+                let question11Value = Array.from(document.querySelectorAll(`input[name = "question11"]:checked`));
+                let answerValues = question11Value.map(input => parseInt(input.value));
+                let correctAnswerCount ;
+
+                if(question11Value.length === question11Answers.length && Array.from(question11Value).every(input => question11Answers.includes(parseInt(input.value)))){
+                    score+=4;
+                    questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";
+                    correctAnswerCount = 4; // give mark as correct answer count
+                }
+                else{
+                    questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                    correctAnswerCount = answerValues.filter(val => question11Answers.includes(val)).length;
+                    if(correctAnswerCount === 2){
+                        score+=2;
+                    }
+                    else if(correctAnswerCount !== 0){
+                        score++;
+                    }
+                    
+                }
+                document.getElementById("question11_Mark").textContent = correctAnswerCount;
+
+            }
+            else if(i === 13){ // choose question 10
+                for(let j=1; j<=4; j++){
+                    let boolValue = document.querySelector(`input[name="question13_answer${j}"]:checked`)?.value;
+                    if(boolValue === question13Answers[j-1]){
+                        score++;
+                        CorrectAnswersCount++;
+                        if(CorrectAnswersCount === 4){
+                            questionContainer.style.background = "linear-gradient(to left, white,rgb(0, 255, 0))";  
+                        } 
+                    }
+                    else{
+                        questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                    }    
+                }
+                document.getElementById("question13_Mark").textContent = CorrectAnswersCount;
+                marksAllowedForall+= 4;
+            }
             else {
                 let value = document.querySelector(`input[name="question${i}"]:checked`)?.value;
                 let markElement = document.getElementById(`question${i}_Mark`);
@@ -130,12 +184,14 @@ function checkAnswers() {
                 }
             }
             
+            
         }
     }
     // display total mark on web page
-    document.getElementById("marks").textContent = `Your score: ${score} out of ${marksAllowed}`;
-    console.log(marksAllowed);
+    document.getElementById("marks").textContent = `Your score: ${score} out of ${marksAllowedForall}`;
+    console.log(marksAllowedForall);
     console.log(`Final score: ${score}`);
+    scrollToTop();
 }
 //updateTimer(); // Initial call to display the timer immediately
 
@@ -154,3 +210,7 @@ let timerInterval = setInterval(() => {
     
     updateTimer();
 }, 1000);
+
+function resetTest(){
+    window.location.reload();
+}
