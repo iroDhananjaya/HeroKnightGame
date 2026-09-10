@@ -33,7 +33,7 @@ function checkAnswers() {
     let question10Answers = ["true","false","false","false"];
     let question11Answers = [1,3];
     let question13Answers = ["false","true","true","false"];
-    let marksAllowedForall = 27;
+    let marksAllowedForall = 27; // increase in loop
     
     
 
@@ -57,6 +57,7 @@ function checkAnswers() {
                     }
                     else{
                         questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                        document.getElementById("correctAnswer4").textContent = `Answer order: ${question4Answers}`
                     }    
                 }
                 document.getElementById("question4_Mark").textContent = CorrectAnswersCount;
@@ -81,7 +82,7 @@ function checkAnswers() {
                     else if (correctAnswerCount !== 0){
                         score++;
                     }
-                    
+                    document.getElementById("correctAnswer6").textContent = `Correct Answers: ${question6Answers}`;
                 }
                 document.getElementById("question6_Mark").textContent = correctAnswerCount;
 
@@ -106,7 +107,7 @@ function checkAnswers() {
                     else if(correctAnswerCount !== 0){
                         score++;
                     }
-                    
+                    document.getElementById("correctAnswer8").textContent = `Correct Answers: ${question8Answers}`;
                 }
                 document.getElementById("question8_Mark").textContent = correctAnswerCount;
 
@@ -124,6 +125,7 @@ function checkAnswers() {
                     }
                     else{
                         questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                        document.getElementById("correctAnswer10").textContent = `Correct Answers: ${question10Answers}`;
                     }    
                 }
                 document.getElementById("question10_Mark").textContent = CorrectAnswersCount;
@@ -148,7 +150,7 @@ function checkAnswers() {
                     else if(correctAnswerCount !== 0){
                         score++;
                     }
-                    
+                    document.getElementById("correctAnswer11").textContent = `Correct Answers: ${question11Answers}`;
                 }
                 document.getElementById("question11_Mark").textContent = correctAnswerCount;
 
@@ -165,6 +167,7 @@ function checkAnswers() {
                     }
                     else{
                         questionContainer.style.background = "linear-gradient(to left, white,rgb(255, 2, 2))";
+                        document.getElementById("correctAnswer13").textContent = `Correct Answers: ${question13Answers}`;
                     }    
                 }
                 document.getElementById("question13_Mark").textContent = CorrectAnswersCount;
@@ -172,6 +175,7 @@ function checkAnswers() {
             }
             else {
                 let value = document.querySelector(`input[name="question${i}"]:checked`)?.value;
+                
                 let markElement = document.getElementById(`question${i}_Mark`);
                 
                 if (value == answers[i - 1]) {
@@ -179,9 +183,13 @@ function checkAnswers() {
                     if (markElement) markElement.textContent = 1;
                     questionContainer.style.background = "linear-gradient(to left, white, rgb(0, 255, 0))";
                 } else {
+                    console.log(answers[i - 1]);
+                    document.getElementById(`correctAnswer${i}`).textContent = `Correct Answer is: ${answers[i-1]}`;
                     if (markElement) markElement.textContent = 0;
                     questionContainer.style.background = "linear-gradient(to left, white, rgb(255, 2, 2))";
+                    
                 }
+                
             }
             
             
@@ -189,7 +197,7 @@ function checkAnswers() {
     }
     // display total mark on web page
     document.getElementById("marks").textContent = `Your score: ${score} out of ${marksAllowedForall}`;
-    console.log(marksAllowedForall);
+    
     console.log(`Final score: ${score}`);
     scrollToTop();
 }

@@ -68,6 +68,12 @@ p{
     white-space: normal;
 }
 
+.correctAnswers{
+    font-weight: bold;
+    color: rgb(0, 4, 252);
+    text-align: center;
+}
+
 input[type="radio"], input[type="checkbox"] {
     width: 1%;
     height: 1%;
