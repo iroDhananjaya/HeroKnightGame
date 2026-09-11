@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>Personal Details Form</title>
-        <link rel="stylesheet" href="..\CSSFiles\personal_form.css">
-        <script src="..\JSFiles\script.js" defer></script>
+        <link rel="stylesheet" href="../CSSFiles/personal_form.css">
+        <script src="../JSFiles/script.js" defer></script>
     </head>
     <body>
         <h1>Personal Details Form</h1><br><br>
@@ -13,34 +13,34 @@
                 00:00:00
             </div>
         </div>
-        <form action="personal_details.php" method="POST">
+        <form action="../PhpFiles/personal_details.php" method="POST">
         <fieldset>
             <label name="fullName" id="fullName" >Full Name:</label>
-            <input type="text" name="full_name" id="full_name" placeholder="Enter your full name"><br><br>
+            <input type="text" name="full_name" id="full_name" placeholder="Enter your full name" required><br><br>
 
             <label name="dob" id="dob"> Date of Birth:</label>
-            <input type="date" name="DOB" id="DOB"><br><br>
+            <input type="date" name="DOB" id="DOB" required><br><br>
 
             <label  name="age" id="age">Age:</label>
-            <input type="number" name="age" id="age"><br><br>
+            <input type="number" name="age" id="age" min="0" max="130" required><br><br>
         
             <label name="email_label" id="email_label">Email:</label>
-            <input type="email" name="Email" id="Email"><br><br>
+            <input type="email" name="Email" id="Email" required><br><br>
 
             <label name="phoneNumber" id="phoneNumber">Phone Number:</label>
-            <input type="number" name="Number" id="Number"><br><br>
+            <input type="tel" name="Number" id="Number" required><br><br>
 
             <label name="gender" id="gender">Gender:</label>
-            <select name="gender_dropdown" id="gender_dropdown">
-                <option selected >Select Gender</option>
-                <option id="male">Male</option>
-                <option id="female">Female</option>
+            <select name="gender_dropdown" id="gender_dropdown" required>
+                <option value="" selected disabled>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
                 
             </select>
             <br><br>
               
             <label name="address" id="address">Address:</label>
-            <input type="text" name="address" id="address" placeholder="Enter your address"><br><br>
+            <input type="text" name="address" id="address" placeholder="Enter your address" required><br><br>
 
             <button type="submit" id="name_button" name="name_button">Submit</button>
         </fieldset>

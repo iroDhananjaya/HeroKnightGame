@@ -1,10 +1,16 @@
 <?php
-$item = $_POST['item'];
-$amount = $_POST['price'];
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: ../HtmlFiles/main.html');
+    exit();
+}
 
-echo "<h2>Data Received!</h2>";
-echo "Item: ". $item ."<br>";
-echo "Amount: Rs." . $amount ." <br>";
+$item = trim($_POST['item'] ?? '');
+$amount = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+
+if ($item === '' || $amount === false || $amount < 0) {
+    http_response_code(422);
+    exit('Please provide an item and a valid, non-negative amount.');
+}
 
 //DB connection
 $conn = new mysqli("localhost","root","","expensesmanagement");
@@ -15,16 +21,19 @@ if($conn->connect_error){
 }
 
 // Data insert
-$sql = "INSERT INTO expenses (Item,Price) VALUES ('$item','$amount')";
-if($conn->query($sql) == TRUE){
-    echo "Data saved Successfully!";
+$statement = $conn->prepare('INSERT INTO expenses (Item, Price) VALUES (?, ?)');
+if ($statement && $statement->bind_param('sd', $item, $amount) && $statement->execute()) {
+    $statement->close();
+    $conn->close();
     header("Location: content.php");
     exit();
-} 
-else{
-    echo "Error: " .$sql . "<br>" . $conn->error;
+}
+if ($statement) {
+    $statement->close();
 }
 $conn->close();
+http_response_code(500);
+exit('Unable to save the expense. Please try again later.');
 ?>
 
 

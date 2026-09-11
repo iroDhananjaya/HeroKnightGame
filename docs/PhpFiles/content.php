@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Daily Expenses overview</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../CSSFiles/style.css">
     </head>
 
     <body>
@@ -32,8 +32,8 @@
 
                     while($row = $result->fetch_assoc()){
                         echo "<tr>";
-                        echo "<td>".$row["Item"]."</td>";
-                        echo "<td>Rs. ".$row["Price"]."</td>";
+                        echo "<td>".htmlspecialchars($row["Item"], ENT_QUOTES, 'UTF-8')."</td>";
+                        echo "<td>Rs. ".htmlspecialchars($row["Price"], ENT_QUOTES, 'UTF-8')."</td>";
                         echo "</tr>";
                     }
                     echo "</table>";
