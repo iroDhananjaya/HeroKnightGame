@@ -1,23 +1,25 @@
-* {
+/** {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
-}
+}*/
 
 body {
-    font-family:poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: rgb(21, 100, 173);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* meka add */
+    justify-content: flex-start; /* center → flex-start */
+    align-items: center; /* meka thiyanna */
     min-height: 100vh;
     margin: 0;
+    padding: 20px 0; /* udata podi space ekak */
 }
 .paper-header {
     text-align: center;
     margin-bottom: 20px;
-    color:black;
+    color:rgb(255, 255, 255);
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
 }
 
