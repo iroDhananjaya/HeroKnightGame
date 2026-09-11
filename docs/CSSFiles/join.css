@@ -69,3 +69,23 @@ h2{
     text-align: center;
     font-size: 80%;
 }
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    #title {
+        height: auto;
+    }
+
+    #noticeContainer {
+        box-sizing: border-box;
+        width: 92%;
+        padding: 5%;
+    }
+
+    #copyrightDiv {
+        position: static;
+    }
+}

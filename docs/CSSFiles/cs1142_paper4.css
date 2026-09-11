@@ -45,3 +45,24 @@ button{
 button:hover{
     background-color:cornflowerblue;
     color: black;}
+
+@media (max-width: 768px) {
+    fieldset {
+        width: 92%;
+        padding: 14px;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    button {
+        width: 100%;
+        min-height: 44px;
+        padding: 12px;
+    }
+}

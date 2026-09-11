@@ -28,8 +28,8 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 700px;
-    max-width: 700px;
+    box-sizing: border-box;
+    width: min(700px, 92vw);
     margin:auto;
 }
 .question-card {
@@ -76,4 +76,20 @@ h4{
 }
 #submitButton:hover {
     background-color: rgb(31, 8, 158);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 16px 0;
+    }
+
+    .quiz-container {
+        padding: 12px;
+    }
+
+    .question-card {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 14px;
+    }
 }
