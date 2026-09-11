@@ -19,6 +19,8 @@ body{
 }
 
 .heading{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: white;
   margin-top: 20px;
