@@ -75,9 +75,9 @@ p{
 }
 
 input[type="radio"], input[type="checkbox"] {
-    width: 1%;
-    height: 1%;
-    transform: scale(1.5);
+    width: 12px;
+    height: 12px;
+    transform: none;
     cursor: pointer;
 }
 
@@ -132,6 +132,11 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 @media (max-width: 768px) {
+    input[type="radio"], input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
     .questionContainer {
         box-sizing: border-box;
         width: 92%;
