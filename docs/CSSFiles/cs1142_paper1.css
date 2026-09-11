@@ -133,8 +133,12 @@ input[type="radio"], input[type="checkbox"] {
 
 @media (max-width: 768px) {
     input[type="radio"], input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        min-height: 22px;
+        margin-right: 8px;
+        vertical-align: middle;
     }
 
     .questionContainer {
