@@ -42,15 +42,12 @@ body {
 
     word-wrap: break-word;
     overflow-wrap: break-word;
-    white-space: normal;{
+    white-space: normal;
 
 
 
 }
-.options {
-    list-style-type: none;
-    padding: 0;
-}
+
 h4{
     color: rgb(5, 5, 5);
     text-align: center;
@@ -59,16 +56,15 @@ h4{
     font-style: italic;
     margin-bottom: 10px;
 }
-.submit-btn {
-    display: block;
+#submitButton {
     width: 100%;
     padding: 10px;
-    background-color: rgb(132, 19, 218);
+    background-color: rgb(51, 255, 0);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    
 }
-.submit-btn:hover {
+#submitButton:hover {
     background-color: rgb(227, 87, 12);
 }
