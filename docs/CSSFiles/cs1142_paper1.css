@@ -5,7 +5,7 @@ body{
 }
 h1,h2,h3{
     text-align: center;
-    font-size: 100%;
+    font-size: 4vw;
     margin-top: 5px;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
@@ -14,7 +14,7 @@ h1,h2,h3{
 h4{
     color: rgb(5, 5, 5);
     text-align: center;
-    font-size: 100%;
+    font-size: 4vw;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 10px;
@@ -31,7 +31,7 @@ p{
 
 .questionContainer {
     background-color: rgba(255, 255, 255, 0.295);
-    font-size: 100%;
+    font-size: clamp(14px, 2vw, 28px);
     height:fit-content;
     width: 70%;
     border-radius: 45px;
@@ -50,7 +50,7 @@ p{
     background-color: rgb(255, 254, 254);
     color: rgb(72, 68, 68);
     border: 3px solid rgb(0, 0, 0);
-    font-size: 100%;
+    font-size: clamp(14px, 2vw, 28px);
     border-radius: 15px;
     font-weight: none;
     height: auto;
@@ -75,19 +75,19 @@ p{
 }
 
 input[type="radio"], input[type="checkbox"] {
-    width: 12px;
-    height: 12px;
+    width: 1.5%;
+    height: 1.5%;
     transform: none;
     cursor: pointer;
 }
 
 #timmer_container{
-    font-size: 150%;
+    font-size: 5vw;
     color: rgb(251, 255, 0);
 }
 
 #marks{
-    font-size: 130%;
+    font-size: 4vw;
     color: rgb(0, 255, 0);
     text-align: center;
     margin-bottom: 20px;
@@ -96,7 +96,7 @@ input[type="radio"], input[type="checkbox"] {
 #submitBtn{
     background-color: rgb(0, 253, 0);
     color: rgb(255, 255, 255);
-    font-size: 100%;
+    font-size: 4vw;
     width: 10%;;
     height:50%;
 
@@ -115,7 +115,7 @@ input[type="radio"], input[type="checkbox"] {
 #resetBtn{
     background-color: rgb(255, 2, 2);
     color: rgb(255, 255, 255);
-    font-size: 100%;
+    font-size: 4vw;
     width: 10%;;
     height:50%;
 
