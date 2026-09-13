@@ -1,6 +1,9 @@
-let timeInSeconds = 10 * 60; // 10 minutes in seconds
+
+
+let timeInSeconds = 1 * 60; // 10 minutes in seconds
 let timerElement = document.getElementById("timer");
 let isSubmitButtonPressed = false;
+let timeOver = false;
 
 function updateTimer() {
     let hours = Math.floor(timeInSeconds / 3600);
@@ -24,6 +27,40 @@ function scrollToTop() {
 }
 
 function checkAnswers() {
+    // List all radio button group names that require selection
+    const requiredRadioGroups = [
+        'question1',
+        'question2',
+        'question3',
+        'question4_answer1',
+        'question4_answer2',
+        'question4_answer3',
+        'question4_answer4',
+        'question5',
+        'question7',
+        'question9',
+        'question10_answer1',
+        'question10_answer2',
+        'question10_answer3',
+        'question10_answer4',
+        'question12',
+        'question13_answer1',
+        'question13_answer2',
+        'question13_answer3',
+        'question13_answer4'
+    ];
+
+    if(!timeOver){
+        for (const groupName of requiredRadioGroups) {
+            const selected = document.querySelector(`input[name="${groupName}"]:checked`);
+            if (!selected) {
+                alert('Please answer all single-choice and True/False questions before submitting!');
+                return; // Stop submission
+            }
+        }
+    }
+    
+
     let score = 0;
     let totalQuestions = 6;
     let answers = [2,1,3,4,3,6,3,8,3,10,11,3,13];// 4,6,8,10,11,13 number didn't check
@@ -207,7 +244,9 @@ let timerInterval = setInterval(() => {
     if(timeInSeconds <= 0) {
         clearInterval(timerInterval);
         alert("Time's up! The test will be submitted automatically.");
+        timeOver = true;
         checkAnswers();
+        
     }
     else if(isSubmitButtonPressed){
         clearInterval(timerInterval);
