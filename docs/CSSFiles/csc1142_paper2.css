@@ -7,7 +7,7 @@
 
 body{
   font-family: 'Poppins', sans-serif;
-  background-color: rgb(0, 0, 38);
+  background-color: rgba(0, 0, 38,0.9);
 }
 
 .entire-content{
@@ -19,6 +19,9 @@ body{
 }
 
 .heading{
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: white;
   margin-top: 20px;
@@ -96,5 +99,12 @@ body{
   .end-container{
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .sub-btn, .reset-btn {
+    width: 100%;
+    padding: 15px 20px;
   }
 }

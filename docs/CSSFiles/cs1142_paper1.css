@@ -5,7 +5,7 @@ body{
 }
 h1,h2,h3{
     text-align: center;
-    font-size: 35px;
+    font-size: 4vw;
     margin-top: 5px;
     color: rgb(255, 255, 255);
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
@@ -14,7 +14,7 @@ h1,h2,h3{
 h4{
     color: rgb(5, 5, 5);
     text-align: center;
-    font-size: 50px;
+    font-size: 4vw;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 10px;
@@ -31,7 +31,7 @@ p{
 
 .questionContainer {
     background-color: rgba(255, 255, 255, 0.295);
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 28px);
     height:fit-content;
     width: 70%;
     border-radius: 45px;
@@ -50,7 +50,7 @@ p{
     background-color: rgb(255, 254, 254);
     color: rgb(72, 68, 68);
     border: 3px solid rgb(0, 0, 0);
-    font-size: 35px;
+    font-size: clamp(14px, 2vw, 28px);
     border-radius: 15px;
     font-weight: none;
     height: auto;
@@ -68,20 +68,26 @@ p{
     white-space: normal;
 }
 
+.correctAnswers{
+    font-weight: bold;
+    color: rgb(0, 4, 252);
+    text-align: center;
+}
+
 input[type="radio"], input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    transform: scale(1.5);
+    width: 1.5%;
+    height: 1.5%;
+    transform: none;
     cursor: pointer;
 }
 
 #timmer_container{
-    font-size: 50px;
+    font-size: 5vw;
     color: rgb(251, 255, 0);
 }
 
 #marks{
-    font-size: 50px;
+    font-size: 4vw;
     color: rgb(0, 255, 0);
     text-align: center;
     margin-bottom: 20px;
@@ -90,10 +96,10 @@ input[type="radio"], input[type="checkbox"] {
 #submitBtn{
     background-color: rgb(0, 253, 0);
     color: rgb(255, 255, 255);
-    font-size: 50px;
-    width: 300px;;
-    height:100px;
-    font-size: 50px;
+    font-size: 4vw;
+    width: 10%;;
+    height:50%;
+
     padding: 10px 20px;
     border: none;
     border-radius: 40px;
@@ -109,10 +115,10 @@ input[type="radio"], input[type="checkbox"] {
 #resetBtn{
     background-color: rgb(255, 2, 2);
     color: rgb(255, 255, 255);
-    font-size: 50px;
-    width: 300px;;
-    height:100px;
-    font-size: 50px;
+    font-size: 4vw;
+    width: 10%;;
+    height:50%;
+
     padding: 10px 20px;
     border: none;
     border-radius: 40px;
@@ -123,4 +129,33 @@ input[type="radio"], input[type="checkbox"] {
     background-color: rgb(190, 0, 0);
     color: rgb(255, 255, 255);
     transition: background-color 0.6s ease;
+}
+
+@media (max-width: 768px) {
+    input[type="radio"], input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        min-width: 22px;
+        min-height: 22px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    .questionContainer {
+        box-sizing: border-box;
+        width: 92%;
+        padding: 12px;
+    }
+
+    .question {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 14px;
+    }
+
+    #submitBtn, #resetBtn {
+        width: 100%;
+        height: auto;
+        margin: 6px 0;
+    }
 }

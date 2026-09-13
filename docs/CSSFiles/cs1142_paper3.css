@@ -4,6 +4,10 @@ body {
     margin: 5% 10% ;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 input[type="radio"] {
     width:30px;
     cursor: pointer;
@@ -51,7 +55,7 @@ label:has(input[type="radio"]:checked) {
     flex-direction: column;
     
     margin: 0px 10%;
-    max-width: max-content;
+    max-width: none;
 }
 
 .que {
@@ -111,7 +115,7 @@ button[type="submit"] {
     font-size: 23px;
     border-radius: 100px;
     padding: 10px 70px; 
-    width: 100px;
+    width: auto;
 }
 
 button[type="submit"]:hover {
@@ -124,6 +128,39 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     transform: scale(0.95);
  
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 5% 4%;
+    }
+
+    #mainhead {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    .que {
+        padding: 16px;
+    }
+
+    .qhead, .ans {
+        font-size: 1rem;
+    }
+
+    .ans {
+        border-radius: 16px;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        margin: 0;
+        padding: 12px 20px;
+    }
 }
 
 

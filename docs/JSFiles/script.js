@@ -1,8 +1,3 @@
-document.getElementById("name_button").onclick = function()
-{
-    onclick = window.alert("Submitted Successfully");
-}
-
 function updateClock(){
 
     const now = new Date();
@@ -10,8 +5,13 @@ function updateClock(){
     const minutes = now.getMinutes().toString().padStart(2,0);
     const seconds = now.getSeconds().toString().padStart(2,0);
     const timeString = `${hours}:${minutes}:${seconds}`;
-    document.getElementById("clock").textContent = timeString;
+    const clock = document.getElementById("clock");
+    if (clock) {
+        clock.textContent = timeString;
+    }
 }
 
-updateClock();
-setInterval(updateClock, 1000);
+if (document.getElementById("clock")) {
+    updateClock();
+    setInterval(updateClock, 1000);
+}

@@ -47,3 +47,23 @@ label{
     background: linear-gradient(to right, black,rgb(27, 27, 191));
 
 }
+
+@media (max-width: 768px) {
+    fieldset {
+        box-sizing: border-box;
+        width: 92%;
+        height: auto;
+        margin-top: 24px;
+        padding: 20px;
+    }
+
+    h1, #clock {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    input, select, button {
+        box-sizing: border-box;
+        max-width: 100%;
+        min-height: 44px;
+    }
+}
