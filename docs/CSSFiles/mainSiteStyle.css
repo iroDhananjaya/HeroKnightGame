@@ -17,7 +17,8 @@ h1{
     margin-bottom: 10px;
     text-align:center;
     font-size:700%;
-    font-family: "Edwardian Script ITC", sans-serif;
+    /* Edwardian Script ITC is not installed on most mobile devices. */
+    font-family: "Edwardian Script ITC", "Brush Script MT", cursive;
 }
 
 #paperNoticeTitle{
