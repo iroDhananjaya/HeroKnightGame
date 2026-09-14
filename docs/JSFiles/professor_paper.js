@@ -24,12 +24,12 @@ function CheckAnswers(){
         let selectedAnswer = document.querySelector(`input[name="question${i}"]:checked`)?.value;
         let question = document.getElementById(`question${i}`);
         if(selectedAnswer == correctAnswers[i-1]){
-            question.style.background = "linear-gradient(to left, white, rgb(0, 255, 0))";
+            question.style.background = "linear-gradient(to left, white, rgba(0, 255, 0, 0.79))";
             score+=10;
             totalMarks+=10;
         }
         else{
-           question.style.background = "linear-gradient(to left, white, rgb(255, 2, 2))";
+           question.style.background = "linear-gradient(to left, white, rgb(255, 2, 0, 0.79))";
            totalMarks+=10;
            document.getElementById(`question${i}_correctAnswer`).textContent = `Correct Answer : ${correctAnswers[i-1]}`;
         }
