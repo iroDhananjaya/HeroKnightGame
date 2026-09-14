@@ -115,4 +115,11 @@ input[type="radio"] {
         margin: 6px 0;
     }
 
+    body{
+        background-image: url("/docs/PicturesFolder/soldier.jpg");
+    }
+
+    #header2{
+        color: white;
+    }
 }
