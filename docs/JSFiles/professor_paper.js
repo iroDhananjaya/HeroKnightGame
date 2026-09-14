@@ -2,7 +2,7 @@ let timeInSeconds = 10 * 60; // 10 minutes in seconds
 let timerElement = document.getElementById("timmer");
 let isSubmitButtonPressed = false;
 let timeOver = false;
-let correctAnswers = ['a','b','c','d','a','b','c','d','a','b'];
+let correctAnswers = ['a','d','b','c','a','c','c','d','d','a'];
 
 function updateTimer() {
     let hours = Math.floor(timeInSeconds / 3600);
