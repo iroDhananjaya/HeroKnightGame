@@ -116,7 +116,7 @@ input[type="radio"] {
     }
 
     body{
-        background-image: url("/docs/PicturesFolder/soldier.jpg");
+        background-image: url("../PicturesFolder/soldier.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
