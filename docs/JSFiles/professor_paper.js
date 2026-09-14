@@ -1,4 +1,4 @@
-let timeInSeconds = 3 * 60; // 10 minutes in seconds
+let timeInSeconds = 10 * 60; // 10 minutes in seconds
 let timerElement = document.getElementById("timmer");
 let isSubmitButtonPressed = false;
 let timeOver = false;
