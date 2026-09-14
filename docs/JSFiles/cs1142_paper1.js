@@ -1,6 +1,6 @@
 
 
-let timeInSeconds = 1 * 60; // 10 minutes in seconds
+let timeInSeconds = 10 * 60; // 10 minutes in seconds
 let timerElement = document.getElementById("timer");
 let isSubmitButtonPressed = false;
 let timeOver = false;
@@ -253,6 +253,7 @@ let timerInterval = setInterval(() => {
     }
     else{
         timeInSeconds--;
+        
     }
     
     updateTimer();
