@@ -15,25 +15,26 @@
                 00:00:00
             </div>
         </div>
-        <form action="../PhpFiles/personal_details.php" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="22441f3a-fd2d-42ed-b2ea-5f3250b8e129">
         <fieldset>
             <label name="fullName" id="fullName" >Full Name:</label>
             <input type="text" name="full_name" id="full_name" placeholder="Enter your full name" required><br><br>
 
-            <label name="dob" id="dob"> Date of Birth:</label>
-            <input type="date" name="DOB" id="DOB" required><br><br>
+            <label name="dob" id="dob" for="DOB">Date of Birth:</label>
+            <input type="date" name="DOB" id="DOB" title="Date of Birth" required><br><br>
 
-            <label  name="age" id="age">Age:</label>
-            <input type="number" name="age" id="age" min="0" max="130" required><br><br>
+            <label name="age_label" id="age_label" for="age">Age:</label>
+            <input type="number" name="age" id="age" min="0" max="130" placeholder="Enter your age" title="Enter your age" required><br><br>
         
-            <label name="email_label" id="email_label">Email:</label>
-            <input type="email" name="Email" id="Email" required><br><br>
+            <label name="email_label" id="email_label" for="Email">Email:</label>
+            <input type="email" name="Email" id="Email" placeholder="Enter your email address" title="Enter your email address" required><br><br>
 
-            <label name="phoneNumber" id="phoneNumber">Phone Number:</label>
-            <input type="tel" name="Number" id="Number" required><br><br>
+            <label for="Number" id="phoneNumber">Phone Number:</label>
+            <input type="tel" name="Number" id="Number" placeholder="Enter your phone number" title="Enter your phone number" required><br><br>
 
-            <label name="gender" id="gender">Gender:</label>
-            <select name="gender_dropdown" id="gender_dropdown" required>
+            <label for="gender_dropdown" id="gender">Gender:</label>
+            <select name="gender_dropdown" id="gender_dropdown" title="Gender" required>
                 <option value="" selected disabled>Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
