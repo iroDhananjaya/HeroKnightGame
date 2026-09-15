@@ -10,6 +10,14 @@ body{
   background-color: rgba(0, 0, 38,0.9);
 }
 
+hr{
+  height: 2px; 
+  background-color: #ffffff; 
+  border: none;
+  width: 80%;
+  margin:0 auto;
+}
+
 .entire-content{
   display: flex;
   flex-direction: column;
