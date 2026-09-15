@@ -93,7 +93,7 @@ label{
     }
 
     body{
-        background-image: url("/docs/PicturesFolder/mobileLion.jpg");
+        background-image: url("../PicturesFolder/mobileLion.jpg");
         background-attachment: fixed;
     }
 }
