@@ -1,7 +1,6 @@
 body {
     /*background : linear-gradient(to right black,rgb(12, 12, 110));*/
-    background-image:/* linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),*/
-                    url("../PicturesFolder/ColoredLion.jpg");
+    background-image:url("../PicturesFolder/ColoredLion.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-image: capacity cover;
@@ -95,5 +94,7 @@ label{
     body{
         background-image: url("../PicturesFolder/mobileLion.jpg");
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
