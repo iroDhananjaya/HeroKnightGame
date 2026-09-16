@@ -116,6 +116,9 @@ button[type="submit"] {
     border-radius: 100px;
     padding: 10px 70px; 
     width: auto;
+
+    max-width: 20%;
+    min-width: 100px;
 }
 
 button[type="submit"]:hover {
@@ -130,37 +133,6 @@ button[type="submit"]:active {
  
 }
 
-@media (max-width: 768px) {
-    body {
-        margin: 5% 4%;
-    }
 
-    #mainhead {
-        font-size: clamp(2rem, 9vw, 2.8rem);
-    }
-
-    .container {
-        margin: 0;
-    }
-
-    .que {
-        padding: 16px;
-    }
-
-    .qhead, .ans {
-        font-size: 1rem;
-    }
-
-    .ans {
-        border-radius: 16px;
-        padding: 8px;
-    }
-
-    button[type="submit"] {
-        width: 100%;
-        margin: 0;
-        padding: 12px 20px;
-    }
-}
 
 
