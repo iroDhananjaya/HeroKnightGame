@@ -4,9 +4,17 @@ body {
     margin: 5% 10% ;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+#markbox {
+    display:none;
+    justify-content: center;
+    margin:0 auto 40px auto;
+    width: 90%;
+
+    border: 2px solid black;
+    border-radius: 100px;
+    background-color: #ffffff;
 }
+
 
 input[type="radio"] {
     width:30px;
@@ -29,7 +37,7 @@ input[type="radio"]:hover {
 }
 
 input[type="radio"]:checked {
-    accent-color: rgb(22, 238, 22);
+    accent-color: blue;
 }
 
 label:has(input[type="radio"]:checked) {
