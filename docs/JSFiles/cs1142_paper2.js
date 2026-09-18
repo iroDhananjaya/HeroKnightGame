@@ -75,6 +75,85 @@ function checkAnswers(e) {
 
     document.getElementsByClassName('ans4')[9].style.color = 'green';
 
+     let m1,m2,m3,m4,m5,m6,m7,m8,m9,m10; 
+
+    if(q1[2].checked){
+        m1=1;
+    }else{
+        m1=0;
+    }
+
+    if(q2[1].checked){
+        m2=1;
+    }else{
+        m2=0;
+    }
+
+    if(q3[1].checked){
+        m3=1;
+    }else{
+        m3=0;
+    }
+
+    if(q4[1].checked){
+        m4=1;
+    }else{
+        m4=0;
+    }
+
+    if(q5[2].checked){
+        m5=1;
+    }else{
+        m5=0;
+    }
+
+    if(q6[1].checked){
+        m6=1;
+    }else{
+        m6=0;
+    }
+    
+    if(q7[0].checked){
+        m7=1;
+    }else{
+        m7=0;
+    }
+
+    if(q8[0].checked){
+        m8=1;
+    }else{
+        m8=0;
+    }
+
+    if(q9[2].checked){
+        m9=1;
+    }else{
+        m9=0;
+    }
+
+    if(q10[2].checked){
+        m10=1;
+    }else{
+        m10=0;
+    }
+
+    const finalMarks=m1+m2+m3+m4+m5+m6+m7+m8+m9+m10;
+    const heading3=document.getElementById("heading3");
+    heading3.innerText=`You Have Obtained ${finalMarks*10}% Out of 100%`;
+
+    heading3.style.fontSize="24px";
+    heading3.style.width="80%";
+    heading3.style.margin="0 auto";
+    heading3.style.padding="10px 20px";
+    heading3.style.borderRadius="8px";
+
+    document.getElementById("hline").style.display="none";
+
+    if (finalMarks>=50){
+        heading3.style.backgroundColor="green";
+    }else{
+        heading3.style.backgroundColor="red";  
+    }
 
     window.scrollTo({top:0,behavior:'smooth'})
 }
