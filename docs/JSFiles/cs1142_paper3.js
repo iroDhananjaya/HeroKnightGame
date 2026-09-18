@@ -96,7 +96,7 @@ document.getElementById('submit').onclick = clickSubmit;
 
  // Time Count down
 
-let timeInSeconds = 180;
+let timeInSeconds = 300;
 
 timeNum = Math.floor(timeInSeconds / 60);
 
