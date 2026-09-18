@@ -2,7 +2,7 @@ let CorrectAnswers = "2,3,2,4,3,2,4,1,2,4".split(',');
 
 console.log(CorrectAnswers);
 
-let countdown, timeUp = 'false';
+let countdown, timeUp = false;
 
 
 //Button Click function
@@ -29,7 +29,7 @@ function clickSubmit(e, timeUp) {
     console.log(answers);
 
     // Alert
-    if (answers.includes(null) && timeUp=='false') {
+    if (answers.includes(null) && timeUp==false) {
         alert("Answer all questions!");
         return;
     }; 
