@@ -2,14 +2,16 @@ let CorrectAnswers = "2,3,2,4,3,2,4,1,2,4".split(',');
 
 console.log(CorrectAnswers);
 
+let countdown;
+
 
 //Button Click function
-function clickSubmit() {
+function clickSubmit(e) {
 
-    // Freeze the Radio Buttons After the Submit
-    document.querySelectorAll(`input[type="radio"]`).forEach(radio => {
-        radio.disabled =true;
-    });
+
+    if (e) {
+        e.preventDefault();
+    }
 
     // Answers Get to Array
     let answers = [];
@@ -26,11 +28,24 @@ function clickSubmit() {
 
     console.log(answers);
 
-    //Alert
-    /* if (answers.length < CorrectAnswers.length) {
-        alert("සියලුම ප්‍රශ්න වලට උත්තර දෙන්න!");
+    // Alert
+    if (answers.includes(null)) {
+        alert("Answer all questions!");
         return;
-    }; */
+    }; 
+
+
+    // Freeze the Radio Buttons After the Submit
+    document.querySelectorAll(`input[type="radio"]`).forEach(radio => {
+    radio.disabled =true;
+    });
+
+
+    // Stop the Countdown
+    clearInterval(countdown);
+
+    //Show Do Again Button
+    document.getElementById('doAgain').style.display = "flex";
 
     // Check Answers
     let total = 0;
@@ -78,15 +93,20 @@ document.getElementById('submit').onclick = clickSubmit;
 
 
  // Time Count down
+
+let timeInSeconds = 600;
+
+timeNum = Math.floor(timeInSeconds / 60);
+
+document.getElementById('minNum').innerHTML = timeNum ;
+
 function startTimer() {
 
     document.getElementById('timebox').style.display = "flex";
     document.getElementById('container').style.display = "flex";
     document.getElementById('start').style.display = "none";
-    document.getElementById('Min10').style.display = "none";
+    document.getElementById('timeMin').style.display = "none";
     document.getElementById('time').style.height = "5%";
-
-    let timeInSeconds = 600;
 
     const timerElement = document.getElementById('time');
 
@@ -115,7 +135,14 @@ function startTimer() {
 
     updateTimer();
 
-    var countdown = setInterval(updateTimer,1000 );
+    countdown = setInterval(updateTimer,1000 );
 }
 
 document.getElementById('start').onclick = startTimer;
+
+
+function resetPage() {
+    location.reload();
+}
+
+document.getElementById('doAgain').onclick = resetPage;
