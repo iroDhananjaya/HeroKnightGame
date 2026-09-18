@@ -1,47 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<html>
+    <head lang="en">
+        <!--Developed By H.P.G.I.Dhananjaya for GitHub WebDev Crew-->
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Main Site</title>
-        <link rel="stylesheet" href="CSSFiles/mainSiteStyle.css?v=mobile-layout-3">
-        
+        <link rel="stylesheet" href="CSSFiles/loginPage.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        </style>
+        <title>Log in</title>
     </head>
     <body>
-        <div id="headerDiv">
-            <h1>Student Portal</h1>
-            <hr>
-        </div>
-        
-        
-        <br><br>
-        <div class="noticeContainer">
-            <div class="notice">
-                <h1 id="studentInformation">Student Information Form</h1>
-                <button type="button" class="noticeButton" id="studentFormButton" onclick="window.location.href='./HtmlFiles/personal_form.html'">Go to Form</button>
+        <div id="sectionContainer">
+            <div id="pictureWindow">
+                <div id="title">Student Portal</div>
+                <div id="logoContainer"><input type="image" src="PicturesFolder/logo.webp" alt="logo.webp" id="logo" width="60px" height="80px">FOS Dipartment of Computer Science</div>
             </div>
-            <div class="notice">
-                <h1 id="paperNoticeTitle">CSC1142<br>(System Analysis and Design)</h1>
-                <h2>Paper No 1</h2>
-                <button type="button" class="noticeButton" id="cs1142Paper1Button" onclick="window.location.href='./HtmlFiles/cs1142_paper1.html'">Go to Paper</button>
-                <h2>Paper No 2</h2>
-                <button type="button" class="noticeButton" id="cs1142Paper2Button" onclick="window.location.href='./HtmlFiles/csc1142_paper2.html'">Go to Paper</button>
-                <h2>Paper No 3</h2>
-                <button type="button" class="noticeButton" id="cs1142Paper3Button" onclick="window.location.href='./HtmlFiles/cs1142_paper3.html'">Go to Paper</button>
-                <h2>Paper No 4</h2>
-                <button type="button" class="noticeButton" id="cs1142Paper4Button" onclick="window.location.href='./HtmlFiles/cs1142_paper4.html'">Go to Paper</button>
-                <h2>Paper No 5</h2>
-                <button type="button" class="noticeButton" id="cs1142Paper5Button" onclick="window.location.href='./HtmlFiles/csc1142_paper5.html'">Go to Paper</button>
-                <h2>Professor's Paper</h2>
-                <button type="button" class="noticeButton" id="cs1142Paper6Button" onclick="window.location.href='./HtmlFiles/professor_paper.html'">Go to Paper</button>
+            <div id="loginWindow">
+                <p>Welcome <span id="h2"><br>Please Login to your Account.</span> </p>
+                <hr>
+                <br>
+                <label id="userNameLabel" class="inputLabels">User Name  </label><br>
+                <input type="text" id="userName" placeholder="Enter User Name" class="inputs"><br><br>
+
+                <label id="passwordLabel" class="inputLabels">Password  </label><br>
+                <input type="password" id="password" placeholder="Enter Password" class="inputs"><br><br>
+
+                <button type="button" id="loginButton">Login</button><br><br>
+                <button type="button" id="resetButton">Reset</button><br><br>
+                <div id="copyRight">&copy; 2026 GitHub WebDev Crew, All Rights Reserved.</div>
             </div>
-            <div class="notice">
-                <h1 id="timeTable">CS Timetable</h1>
-                <button type="button" class="noticeButton" id="csTimetableButton" onclick="window.location.href='./HtmlFiles/TimeTable.html'">Go to Timetable</button>
-            </div>
+            
         </div>
-        <div id="joinUsDev"><a href="./HtmlFiles/join.html" id="joinUs">Join Us</a></div>
-        <div id="copyrightDiv"><b>&copy; 2026 Student Portal, By Git Web Dev Crew, All rights reserved.</b>
-        </div>
+        <script src="JSFiles/loginPage.js"></script>
     </body>
 </html>

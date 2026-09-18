@@ -1,0 +1,150 @@
+body{
+    margin: 0px;
+    background-color: rgb(4, 4, 65);
+}
+#sectionContainer{
+    height: 100vh;
+    display: flex;
+    
+}
+#pictureWindow{
+    background-image: url("../PicturesFolder/ruhuna12pc.jpg");
+    height: 100vh;
+    width: 75vw;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#title{
+    color: white;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    height: 130px;
+    width: 55vw;
+    font-size: 600%;
+    /*border: 5px solid white;*/
+    text-shadow: 0 15px 3px black;
+    font-family: 'Pacifico', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+    border-radius: 25px;
+    backdrop-filter: blur(2px);
+}
+
+#logo{
+    border-radius: 40px;
+}
+
+#logoContainer{
+    margin-bottom: 0;
+    margin-top: 48%;
+    height: 75px;
+    width: 700px;
+    color: white;
+}
+
+#loginWindow{
+    border: 5px solid black;
+    min-height: 60%;
+    height: auto;
+    width: 50vw;
+    text-align: center;
+    margin-top: 0px;
+    backdrop-filter: blur(12px);
+
+    font-size: 150%;
+    font-family: 'roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+
+    border-radius: 25px;
+    
+}
+
+p{
+
+    color:rgb(255, 255, 255);
+    margin-top: 7%;
+    margin-bottom: 10%;
+    line-height: 0.1; /* redeuce text gap */ 
+    text-align:center;
+    font-size:500%;
+    /* Edwardian Script ITC is not installed on most mobile devices. */
+    font-family: "Display", "Brush Script MT", cursive;
+    text-shadow: 0 5px 10px black ;
+}
+
+#h2{
+    font-size: 20%;
+    font-family: "Display", "Brush Script MT", cursive;
+    text-shadow: 10px 5px 10px rgba(0, 0, 0, 0.616) ;
+    color: rgb(162, 162, 162);
+}
+
+.inputs{
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.71);
+    height: 7%;
+
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+    font-size: 90%;
+}
+
+.inputLabels{
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.671);
+    font-size: 110%;
+    color: wheat;
+}
+
+#loginButton{
+    border-radius: 15px;
+    background-color: rgb(25, 0, 255);
+    color: yellow;
+    font-size: 100%;
+    height: 7%;
+    width: 30%;
+    cursor: pointer;
+}
+
+#loginButton:hover{
+    background-color: rgb(0, 229, 0);
+}
+
+#resetButton{
+    border-radius: 15px;
+    background-color: rgb(255, 0, 0);
+    height: 7%;
+    width: 15%;
+    cursor: pointer;
+}
+
+#resetButton:hover{
+    background-color: rgb(229, 0, 0);
+}
+
+#copyRight{
+    margin-top: auto;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, monospace;
+    font-weight: bold;
+    font-size: 50%;
+    color: white;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background-image: url("../PicturesFolder/ruhuna12.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #footer{ 
+        position: sticky;
+        bottom: 0;
+        z-index: 1000;
+        font-size: 60%;
+    }
+    main{
+        flex: 1;
+    }
+}
