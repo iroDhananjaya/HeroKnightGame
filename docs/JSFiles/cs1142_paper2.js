@@ -149,7 +149,7 @@ function checkAnswers(e) {
 
     document.getElementById("hline").style.display="none";
 
-    if (finalMarks>=50){
+    if (finalMarks>=5){
         heading3.style.backgroundColor="green";
     }else{
         heading3.style.backgroundColor="red";  
