@@ -139,7 +139,8 @@ function checkAnswers(e) {
 
     const finalMarks=m1+m2+m3+m4+m5+m6+m7+m8+m9+m10;
     const heading3=document.getElementById("heading3");
-    heading3.innerText=`You Have Obtained ${finalMarks*10}% Out of 100%`;
+    let marksPercentage=finalMarks*10;
+    heading3.innerText=`You Have Obtained ${marksPercentage}% Out of 100%`;
 
     heading3.style.fontSize="24px";
     heading3.style.width="80%";
@@ -148,8 +149,8 @@ function checkAnswers(e) {
     heading3.style.borderRadius="8px";
 
     document.getElementById("hline").style.display="none";
-
-    if (finalMarks>=5){
+    
+    if (marksPercentage>=5){
         heading3.style.backgroundColor="green";
     }else{
         heading3.style.backgroundColor="red";  
