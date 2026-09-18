@@ -2,11 +2,11 @@ let CorrectAnswers = "2,3,2,4,3,2,4,1,2,4".split(',');
 
 console.log(CorrectAnswers);
 
-let countdown;
+let countdown, timeUp = 'false';
 
 
 //Button Click function
-function clickSubmit(e) {
+function clickSubmit(e, timeUp) {
 
 
     if (e) {
@@ -29,7 +29,7 @@ function clickSubmit(e) {
     console.log(answers);
 
     // Alert
-    if (answers.includes(null)) {
+    if (answers.includes(null) && timeUp=='false') {
         alert("Answer all questions!");
         return;
     }; 
@@ -47,6 +47,9 @@ function clickSubmit(e) {
     //Show Do Again Button
     document.getElementById('doAgain').style.display = "flex";
 
+    //Hide Submit Button
+    document.getElementById('submit').style.display = 'none';
+
     // Check Answers
     let total = 0;
     for (i = 0; i < CorrectAnswers.length; i++) {
@@ -61,7 +64,6 @@ function clickSubmit(e) {
             if (radio) {
             radio.parentElement.style.backgroundColor = "red";
             radio.parentElement.style.border = "2px solid #30dfef"
-            radio.style.accentColor = "blue";
             };
 
             // Correct Answer Highlight Green
@@ -94,7 +96,7 @@ document.getElementById('submit').onclick = clickSubmit;
 
  // Time Count down
 
-let timeInSeconds = 600;
+let timeInSeconds = 180;
 
 timeNum = Math.floor(timeInSeconds / 60);
 
@@ -126,7 +128,8 @@ function startTimer() {
         if (timeInSeconds == 0) {
             clearInterval(countdown);
             timerElement.innerHTML = "Time Up!";
-            clickSubmit(); 
+
+            clickSubmit(null, true); 
 
         }
 
