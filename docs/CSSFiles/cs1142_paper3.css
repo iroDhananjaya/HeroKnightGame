@@ -4,6 +4,46 @@ body {
     margin: 5% 10% ;
 }
 
+#timebox {
+    display: none;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    top: 10px;
+
+    font-size: 40px;
+}
+
+#timebox2 {
+    display: flex;
+    flex-direction: column;
+   justify-content:center;
+   align-items:center;
+   
+   margin: 0 auto 0 auto; 
+}
+
+#Min10 {
+    font-size: 40px
+}
+
+#start {
+    border:2px solid rgb(21, 219, 21);background-color:rgb(14, 114, 27) ;
+    color: white;
+    cursor: pointer;
+
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+#start:hover {
+    transform: scale(1.05);
+}
+
+#start:active {
+    transform: scale(0.95);
+}
+
 #markbox {
     display:none;
     justify-content: center;
@@ -58,8 +98,8 @@ label:has(input[type="radio"]:checked) {
     justify-content: center;
 }
 
-.container {
-    display: flex;
+#container {
+    display: none;
     flex-direction: column;
     
     margin: 0px 10%;

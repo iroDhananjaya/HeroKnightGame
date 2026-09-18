@@ -2,9 +2,11 @@ let CorrectAnswers = "2,3,2,4,3,2,4,1,2,4".split(',');
 
 console.log(CorrectAnswers);
 
-document.getElementById('submit').onclick = function() {
-    event.preventDefault();
 
+//Button Click function
+function clickSubmit() {
+
+    // Freeze the Radio Buttons After the Submit
     document.querySelectorAll(`input[type="radio"]`).forEach(radio => {
         radio.disabled =true;
     });
@@ -36,10 +38,9 @@ document.getElementById('submit').onclick = function() {
         if (answers[i] == CorrectAnswers[i]) {
             total += 1;
         } else {
-            event.preventDefault();
 
             // Wrong Answer Highlight Red
-            let radio = document.querySelector(`input[name="q${i+1}"][value="${answers[i]}"]`);
+            const radio = document.querySelector(`input[name="q${i+1}"][value="${answers[i]}"]`);
             
 
             if (radio) {
@@ -49,7 +50,7 @@ document.getElementById('submit').onclick = function() {
             };
 
             // Correct Answer Highlight Green
-            let radiocorrect = document.querySelector(`input[name="q${i+1}"][value="${CorrectAnswers[i]}"]`);
+            const radiocorrect = document.querySelector(`input[name="q${i+1}"][value="${CorrectAnswers[i]}"]`);
 
 
             if (radiocorrect) {
@@ -70,6 +71,51 @@ document.getElementById('submit').onclick = function() {
     });
 
 
-
 };
 
+document.getElementById('submit').onclick = clickSubmit;
+// End of Button Click Event
+
+
+ // Time Count down
+function startTimer() {
+
+    document.getElementById('timebox').style.display = "flex";
+    document.getElementById('container').style.display = "flex";
+    document.getElementById('start').style.display = "none";
+    document.getElementById('Min10').style.display = "none";
+    document.getElementById('time').style.height = "5%";
+
+    let timeInSeconds = 600;
+
+    const timerElement = document.getElementById('time');
+
+    function updateTimer() {     
+        var minute = Math.floor(timeInSeconds/60);
+        var seconds = timeInSeconds % 60;
+
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+        if (minute <10 ) {
+            minute = "0" + minute;
+        }
+
+        timerElement.innerHTML = minute + ":" + seconds;
+
+        if (timeInSeconds == 0) {
+            clearInterval(countdown);
+            timerElement.innerHTML = "Time Up!";
+            clickSubmit(); 
+
+        }
+
+        timeInSeconds--;
+    }
+
+    updateTimer();
+
+    var countdown = setInterval(updateTimer,1000 );
+}
+
+document.getElementById('start').onclick = startTimer;
