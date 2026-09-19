@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const userNameInput = document.getElementById("userName");
     const passwordInput = document.getElementById("password");
 
-    const userNames = ["dhananjaya", "sandaru", "hasantha", "dineth", "janith","guest"];
-    const passwords = ["dhananjaya123", "sandaru123", "hasantha123", "dineth123", "janith123","guest"];
+    const userNames = ["dhananjaya", "sandaru", "hasantha", "dineth", "janith","guest","hansi"];
+    const passwords = ["dhananjaya123", "sandaru123", "hasantha123", "dineth123", "janith123","guest","hansi123"];
 
     // Login Click Handler
     loginButton.addEventListener("click", () => {
